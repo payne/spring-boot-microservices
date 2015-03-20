@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <title>Order System | Customers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <link rel="stylesheet" type="text/css" href="main.css"></link>
+</head>
+<body>
+    <h1><a href="home">Order System</a></h1>
+    <h3>Orders</h3>
+    <td>
+        <table>
+            <tr th:each="order : ${orders}">
+                <td><a href="customers.html"
+                       th:href="@{'/orders/' + ${order.id}}"><span th:text="${order.id}">Order Id</span></a></td>
+            </tr>
+        </table>
+    </td>
+
+</body>
+</html>
